@@ -54,3 +54,14 @@
     text-decoration: none;
   }
 }
+
+.form {
+  --f-direction: column;
+  --f-gap: 0.5rem;
+  --f-align: stretch;
+
+  margin-top: -80px;
+  padding: 1rem;
+
+  background-color: slateblue;
+}

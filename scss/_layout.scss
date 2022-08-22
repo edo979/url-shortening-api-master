@@ -1,6 +1,15 @@
+.flex {
+  display: flex;
+  flex-direction: var(--f-direction, row);
+  align-items: var(--f-align, center);
+  justify-content: var(--f-justify, space-between);
+  gap: var(--f-gap, 1rem);
+}
+
 *[class*='container'] {
   width: min(100%, 1440px);
   margin-inline: auto;
+  padding-block: 2rem;
 }
 
 .grid-container {
@@ -24,4 +33,9 @@
   grid-area: 3 / 2 / 4 / 3;
   justify-self: center;
   width: 30ch;
+  margin-bottom: 5rem;
+}
+
+main {
+  grid-area: 1 / 2 / 2 / 3;
 }
