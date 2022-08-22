@@ -80,4 +80,23 @@
       margin-top: 5rem;
     }
   }
+
+  .footer {
+    --f-direction: row;
+    --f-align: start;
+    text-align: left;
+
+    &_brand {
+      flex-basis: 33.33%;
+
+      .brand-icon {
+        width: 100px;
+        height: 20px;
+      }
+    }
+
+    &_nav {
+      width: 20ch;
+    }
+  }
 }
