@@ -58,10 +58,40 @@
 .form {
   --f-direction: column;
   --f-gap: 0.5rem;
-  --f-align: stretch;
 
   margin-top: -80px;
   padding: 1rem;
 
   background-color: slateblue;
+
+  input,
+  button {
+    width: 100%;
+  }
+}
+
+.content-center {
+  width: 30ch;
+  margin-inline: auto;
+}
+
+.boxes {
+  --f-direction: column;
+  position: relative;
+  isolation: isolate;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background-color: limegreen;
+    z-index: -1;
+  }
+}
+
+.box {
+  padding: 1rem;
+  background-color: white;
 }
