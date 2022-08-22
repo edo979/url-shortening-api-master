@@ -26,13 +26,13 @@
     </style>
   </head>
   <body>
-    <div class="grid-container bg-light">
-      <nav class="navbar">
-        <a href="#" class="navbar_brand">
+    <div class="navbar-wrapper | grid-container bg-light">
+      <nav class="navbar" aria-label="main navigation">
+        <a href="#" class="navbar_brand" aria-label="to home page">
           <img src="./images/logo.svg" alt="" />
         </a>
 
-        <label for="nav-toggler" class="navbar_toggler">
+        <label for="nav-toggler" class="navbar_toggler" aria-hidden="true">
           <span></span>
           <span></span>
           <span></span>
@@ -40,7 +40,11 @@
 
         <input type="checkbox" name="nav-toggler" id="nav-toggler" />
 
-        <ul class="navbar_nav nav">
+        <ul
+          class="navbar_nav nav"
+          id="navbar-nav"
+          aria-label="main navigation links"
+        >
           <li class="nav_item">
             <a href="#" class="nav_link">Features</a>
           </li>
