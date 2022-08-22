@@ -84,19 +84,27 @@
   .footer {
     --f-direction: row;
     --f-align: start;
+    --f-gap: clamp(1rem, 10vw - 4rem, 4.5rem);
+
     text-align: left;
 
     &_brand {
-      flex-basis: 33.33%;
-
       .brand-icon {
-        width: 100px;
-        height: 20px;
+        width: 120px;
+        height: 30px;
       }
     }
 
     &_nav {
-      width: 20ch;
+      width: 16ch;
+
+      &:first-of-type {
+        margin-left: auto;
+      }
     }
+  }
+
+  .social-list {
+    --f-gap: 1rem;
   }
 }

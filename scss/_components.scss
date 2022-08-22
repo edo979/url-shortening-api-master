@@ -127,6 +127,8 @@
 
 .attribution {
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: -1.5rem;
   font-size: 11px;
   text-align: center;
