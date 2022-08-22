@@ -1,5 +1,27 @@
 *[class*='container'] {
   width: min(100%, 1440px);
   margin-inline: auto;
-  padding: 40px 25px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: minmax(25px, 1fr) minmax(350px, 1110px) minmax(
+      25px,
+      1fr
+    );
+}
+
+.navbar {
+  grid-area: 1 / 2 / 2 / 3;
+  align-self: start;
+}
+
+.hero-image {
+  grid-area: 2 / 2 / 3 / 4;
+}
+
+.header {
+  grid-area: 3 / 2 / 4 / 3;
+  justify-self: center;
+  width: 30ch;
 }

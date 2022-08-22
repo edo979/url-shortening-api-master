@@ -38,4 +38,17 @@
       display: none;
     }
   }
+
+  .header {
+    grid-area: 2 / 2 / 3 / 3;
+    justify-self: start;
+    width: 40ch;
+  }
+
+  .hero-image {
+    grid-area: 2 / 2 / 3 / 4;
+    justify-self: end;
+    width: 45%;
+    height: auto;
+  }
 }
