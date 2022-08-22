@@ -1,0 +1,12 @@
+@media (min-width: 50em) {
+  // LAYOUT
+  .navbar {
+    &_toggler {
+      display: none;
+    }
+
+    &_nav {
+      display: flex;
+    }
+  }
+}

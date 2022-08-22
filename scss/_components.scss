@@ -1,14 +1,18 @@
 .navbar {
-  &_toggler {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 
+  &_toggler {
     width: 20px;
     height: 20px;
     padding: 0;
-    margin: 0;
+    margin: 0 0 0 auto;
     border: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     background-color: transparent;
 
@@ -18,5 +22,28 @@
       height: 2px;
       background-color: gray;
     }
+  }
+
+  &_nav {
+    display: none;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    gap: 1rem;
+    flex-basis: 100%;
+  }
+}
+
+.nav {
+  &_item {
+    &.user-login {
+      margin-left: auto;
+    }
+  }
+
+  &_link {
+    text-decoration: none;
   }
 }
