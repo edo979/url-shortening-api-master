@@ -1,12 +1,41 @@
+// For navigation on mobile
+@media (max-width: 49.99em) {
+  .navbar {
+    position: relative;
+
+    &_nav {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50px;
+
+      flex-direction: column;
+
+      background-color: gray;
+
+      // move nav to left
+      transform: translateX(120%);
+      transition: transform 0.5s ease-in-out;
+
+      // last two items in navbar
+      > li {
+        margin: 0 !important;
+      }
+    }
+
+    // Show navbar on click in mobile view
+    #nav-toggler:is(:checked) + &_nav {
+      display: flex;
+      transform: translateX(0%);
+    }
+  }
+}
+
 @media (min-width: 50em) {
   // LAYOUT
   .navbar {
     &_toggler {
       display: none;
-    }
-
-    &_nav {
-      display: flex;
     }
   }
 }
