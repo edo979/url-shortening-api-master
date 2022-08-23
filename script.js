@@ -48,23 +48,34 @@ const shortcodeApp = (function () {
   function updateView() {
     if (state.length === 0) return
 
-    let linkEls = ''
-
     state.forEach((link) => {
-      linkEls += getLinkTemplate(link.original_link, link.full_short_link)
-    })
+      const divEl = document.createElement('div')
+      divEl.setAttribute('class', 'links-list_link | flex')
 
-    linkListEl.innerHTML = linkEls
+      divEl.innerHTML = `<p>${link.original_link}</p>
+      <a href="${link.full_short_link}">${link.full_short_link}</a>`
+
+      const buttonEl = document.createElement('button')
+      buttonEl.setAttribute('class', 'btn btn-square')
+      buttonEl.textContent = 'Copy'
+      buttonEl.onclick = (e) => {
+        copyLink(e)
+      }
+
+      divEl.appendChild(buttonEl)
+      linkListEl.appendChild(divEl)
+    })
   }
 
-  function getLinkTemplate(original_link, shorten_link) {
-    return `
-    <div class="links-list_link | flex">
-      <p>${original_link}</p>
-      <a href="${shorten_link}">${shorten_link}</a>
-      <button class="btn btn-square">Copy</button>
-    </div>
-    `
+  /**
+   * @param {Event} e
+   */
+  function copyLink(e) {
+    /** @type {Element} */
+    const buttonEl = e.target
+
+    buttonEl.textContent = 'Copied!'
+    buttonEl.classList.add('btn-dark')
   }
 
   /** Get data from Local storage */
