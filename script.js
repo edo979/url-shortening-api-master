@@ -22,11 +22,14 @@ const shortcodeApp = (function () {
   function setEventListener() {
     btnEl.addEventListener('click', (e) => {
       getShortenLink(inputEl.value)
+      inputEl.value = ''
     })
   }
 
   function getShortenLink(link) {
-    fetch('./data.json')
+    const url = `https://api.shrtco.de/v2/shorten?url=${link}`
+
+    fetch(url)
       .then((response) => {
         if (response.ok) return response.json()
         throw new Error('Network Error!')
@@ -51,6 +54,8 @@ const shortcodeApp = (function () {
   function updateView() {
     if (state.length === 0) return
 
+    linkListEl.innerHTML = ''
+
     state.forEach((link) => {
       const divEl = document.createElement('div')
       divEl.setAttribute('class', 'links-list_link | flex')
@@ -66,7 +71,8 @@ const shortcodeApp = (function () {
       }
 
       divEl.appendChild(buttonEl)
-      linkListEl.appendChild(divEl)
+
+      linkListEl.append(divEl)
     })
   }
 
