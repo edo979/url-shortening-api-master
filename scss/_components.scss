@@ -70,6 +70,19 @@
   }
 }
 
+.links-list {
+  margin-top: 1rem;
+
+  &_link {
+    padding: 1rem;
+    background-color: white;
+
+    a {
+      margin-left: auto;
+    }
+  }
+}
+
 .content-center {
   width: 30ch;
   margin-inline: auto;
