@@ -61,6 +61,22 @@
     }
   }
 
+  .links-list {
+    --f-direction: row;
+    --f-align: center;
+
+    margin-top: 1rem;
+
+    &_link {
+      padding: 1rem;
+      background-color: white;
+
+      a {
+        margin-left: auto;
+      }
+    }
+  }
+
   .boxes {
     --f-direction: row;
 
