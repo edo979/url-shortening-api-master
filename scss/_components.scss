@@ -71,13 +71,20 @@
 }
 
 .links-list {
-  --f-direction: column;
-  --f-align: stretch;
   margin-top: 1rem;
 
   &_link {
+    --f-direction: column;
+    --f-align: stretch;
+    --f-gap: 1rem;
+
     padding: 1rem;
+
     background-color: white;
+
+    &:not(:first-child) {
+      margin-top: 1rem;
+    }
   }
 }
 

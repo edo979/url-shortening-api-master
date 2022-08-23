@@ -62,12 +62,10 @@
   }
 
   .links-list {
-    --f-direction: row;
-    --f-align: center;
-
-    margin-top: 1rem;
-
     &_link {
+      --f-direction: row;
+      --f-align: center;
+
       padding: 1rem;
       background-color: white;
 
