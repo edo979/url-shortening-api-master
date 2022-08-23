@@ -1,7 +1,10 @@
 const shortcodeApp = (function () {
   const inputEl = document.getElementById('link'),
     btnEl = document.getElementById('fetch-btn'),
-    linkListEl = document.getElementById('link-list')
+    linkListEl = document.getElementById('link-list'),
+    BTN_COPIED_CLASS = 'btn-dark',
+    BTN_COPY_TEXT = 'Copy',
+    BTN_COPIED_TEXT = 'Copied!'
 
   let state = []
 
@@ -57,7 +60,7 @@ const shortcodeApp = (function () {
 
       const buttonEl = document.createElement('button')
       buttonEl.setAttribute('class', 'btn btn-square')
-      buttonEl.textContent = 'Copy'
+      buttonEl.textContent = BTN_COPY_TEXT
       buttonEl.onclick = (e) => {
         copyLink(e.target)
       }
@@ -71,16 +74,27 @@ const shortcodeApp = (function () {
    * @param {Element} buttonEl
    */
   function copyLink(buttonEl) {
+    clearButtonState()
+
     const linkText = buttonEl.parentElement.querySelector('a').innerText
 
-    buttonEl.textContent = 'Copied!'
-    buttonEl.classList.add('btn-dark')
+    buttonEl.textContent = BTN_COPIED_TEXT
+    buttonEl.classList.add(BTN_COPIED_CLASS)
 
     try {
       navigator.clipboard.writeText(linkText)
     } catch (error) {
       console.log(error)
     }
+  }
+
+  function clearButtonState() {
+    const btnEls = linkListEl.querySelectorAll('button')
+
+    btnEls.forEach((el) => {
+      el.classList.remove(BTN_COPIED_CLASS)
+      el.innerText = BTN_COPY_TEXT
+    })
   }
 
   /** Get data from Local storage */
