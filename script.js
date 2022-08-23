@@ -59,7 +59,7 @@ const shortcodeApp = (function () {
       buttonEl.setAttribute('class', 'btn btn-square')
       buttonEl.textContent = 'Copy'
       buttonEl.onclick = (e) => {
-        copyLink(e)
+        copyLink(e.target)
       }
 
       divEl.appendChild(buttonEl)
@@ -68,14 +68,19 @@ const shortcodeApp = (function () {
   }
 
   /**
-   * @param {Event} e
+   * @param {Element} buttonEl
    */
-  function copyLink(e) {
-    /** @type {Element} */
-    const buttonEl = e.target
+  function copyLink(buttonEl) {
+    const linkText = buttonEl.parentElement.querySelector('a').innerText
 
     buttonEl.textContent = 'Copied!'
     buttonEl.classList.add('btn-dark')
+
+    try {
+      navigator.clipboard.writeText(linkText)
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   /** Get data from Local storage */
