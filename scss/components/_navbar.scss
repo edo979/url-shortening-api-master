@@ -7,6 +7,17 @@
   align-items: center;
   gap: 2rem;
 
+  &_brand {
+    flex-shrink: 0;
+    width: 120px;
+    height: 40px;
+
+    svg {
+      fill: hsl(var(--clr-neutral-100));
+      height: 100%;
+    }
+  }
+
   > input {
     display: none;
   }
@@ -36,7 +47,7 @@
 
   &_nav {
     display: flex;
-    gap: 1rem;
+    gap: 1.55rem;
     flex-basis: 100%;
 
     list-style: none;
@@ -53,8 +64,6 @@
   }
 
   &_link {
-    font-size: var(--fs-300);
-    font-weight: 700;
     text-decoration: none;
   }
 }
