@@ -1,8 +1,25 @@
+:root {
+  --clr-primary-400: 180, 66%, 49%; // Cyan
+  --clr-primary-200: 257, 27%, 26%; // Dark Violet
+
+  --clr-secondary: 0, 87%, 67%; // Red
+
+  --clr-neutral-100: 260, 8%, 14%; // Very Dark Violet
+  --clr-neutral-200: 255, 11%, 22%; // Very Dark Blue
+  --clr-neutral-400: 257, 7%, 63%; // Grayish Violet
+  --clr-neutral-700: 0, 0%, 75%; // Gray
+  --clr-neutral-900: 0, 0%, 100%; // White
+}
+
 // UTILITY
+.bg-light {
+  background-color: hsl(var(--clr-neutral-900));
+}
+
 .bg-neutral {
-  background-color: lightgray;
+  background-color: hsl(var(--clr-neutral-700), 0.25);
 }
 
 .bg-dark {
-  background-color: gray;
+  background-color: hsl(var(--clr-neutral-100));
 }
