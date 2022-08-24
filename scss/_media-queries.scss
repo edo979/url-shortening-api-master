@@ -51,6 +51,14 @@
 }
 
 @media (min-width: 50em) {
+  :root {
+    --fs-200: 0.825rem;
+    --fs-300: 0.855rem;
+    --fs-400: 1rem;
+    --fs-500: 1.05rem;
+    --fs-800: 4.3rem;
+  }
+
   // LAYOUT
   .navbar {
     &_toggler {
