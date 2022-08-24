@@ -48,6 +48,7 @@
   &_nav {
     display: flex;
     gap: 1.55rem;
+    align-items: center;
     flex-basis: 100%;
 
     list-style: none;
@@ -58,6 +59,8 @@
 
 .nav {
   &_item {
+    font-weight: 700;
+
     &.user-login {
       margin-left: auto;
     }
