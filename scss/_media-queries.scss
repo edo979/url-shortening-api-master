@@ -4,29 +4,48 @@
     position: relative;
 
     &_nav {
+      --v-gap: 1.55rem;
+
       position: absolute;
       left: 0;
       right: 0;
       top: 50px;
+      padding: 2.25rem 1.5rem;
+      border-radius: 10px;
 
       flex-direction: column;
+      align-items: center;
+      gap: 1.75rem;
 
-      background-color: gray;
+      background-color: hsl(var(--clr-primary-200));
 
       // move nav to left
       transform: translateX(120%);
       transition: transform 0.5s ease-in-out;
-
-      // last two items in navbar
-      > li {
-        margin: 0 !important;
-      }
     }
 
     // Show navbar on click in mobile view
     #nav-toggler:is(:checked) + &_nav {
       display: flex;
       transform: translateX(0%);
+    }
+  }
+
+  .nav {
+    &_item {
+      &.user-login {
+        align-self: stretch;
+        padding-top: 2rem;
+        margin-left: 0;
+        border-top: 1px solid hsl(var(--clr-neutral-900), 0.15);
+
+        text-align: center;
+      }
+    }
+
+    &_link {
+      font-size: var(--fs-400);
+      color: hsl(var(--clr-neutral-900));
     }
   }
 }
