@@ -5,7 +5,7 @@
 
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 2.25rem;
 
   &_brand {
     flex-shrink: 0;
@@ -47,7 +47,7 @@
 
   &_nav {
     display: flex;
-    gap: 1.55rem;
+    gap: 1.7rem;
     align-items: center;
     flex-basis: 100%;
 
@@ -68,5 +68,7 @@
 
   &_link {
     text-decoration: none;
+    font-size: var(--fs-300);
+    color: hsl(var(--clr-neutral-400));
   }
 }

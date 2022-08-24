@@ -73,13 +73,6 @@
     }
   }
 
-  .nav {
-    &_link {
-      font-size: var(--fs-300);
-      color: hsl(var(--clr-neutral-400));
-    }
-  }
-
   .header {
     grid-area: 2 / 2 / 3 / 3;
     justify-self: start;
