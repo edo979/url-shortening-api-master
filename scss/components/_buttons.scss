@@ -1,0 +1,17 @@
+.btn {
+  padding: 0.6rem 1.5rem;
+  border-radius: 4rem;
+  border: 0;
+
+  cursor: pointer;
+
+  &-primary {
+    color: hsl(var(--clr-neutral-900));
+    background-color: hsl(var(--clr-primary-400));
+  }
+
+  &-small {
+    font-size: var(--fs-300);
+    padding: 0.5rem 1.3rem;
+  }
+}
