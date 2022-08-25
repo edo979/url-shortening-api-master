@@ -5,7 +5,7 @@
   --fs-300: 0.855rem;
   --fs-400: 1rem;
   --fs-500: 1.05rem;
-  --fs-800: 1.5rem;
+  --fs-800: 2.25rem;
 }
 
 html {
@@ -15,5 +15,6 @@ html {
 }
 
 h1 {
+  line-height: 1.15;
   font-size: var(--fs-800);
 }
