@@ -59,7 +59,9 @@
 
 .nav {
   &_item {
+    font-size: var(--fs-300);
     font-weight: 700;
+    color: hsl(var(--clr-neutral-400));
 
     &.user-login {
       margin-left: auto;
@@ -68,7 +70,6 @@
 
   &_link {
     text-decoration: none;
-    font-size: var(--fs-300);
-    color: hsl(var(--clr-neutral-400));
+    color: inherit;
   }
 }

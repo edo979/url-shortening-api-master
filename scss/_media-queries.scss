@@ -27,32 +27,32 @@
       display: flex;
       transform: translateX(0%);
     }
-  }
 
-  .nav {
-    &_item {
-      &.user-login,
-      &.btn {
-        align-self: stretch;
-        text-align: center;
+    .nav {
+      &_item {
+        &.user-login,
+        &.btn {
+          align-self: stretch;
+          text-align: center;
+        }
+
+        &.user-login {
+          padding-top: 1.75rem;
+          margin-left: 0;
+          border-top: 1px solid hsl(var(--clr-neutral-900), 0.15);
+        }
+
+        &.btn {
+          margin-top: -0.5rem;
+          padding: 0.575rem 1.5rem;
+          font-size: var(--fs-400);
+        }
       }
 
-      &.user-login {
-        padding-top: 1.75rem;
-        margin-left: 0;
-        border-top: 1px solid hsl(var(--clr-neutral-900), 0.15);
-      }
-
-      &.btn {
-        margin-top: -0.5rem;
-        padding: 0.575rem 1.5rem;
+      &_link {
         font-size: var(--fs-400);
+        color: hsl(var(--clr-neutral-900));
       }
-    }
-
-    &_link {
-      font-size: var(--fs-400);
-      color: hsl(var(--clr-neutral-900));
     }
   }
 }
