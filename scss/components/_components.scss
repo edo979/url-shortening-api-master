@@ -77,8 +77,18 @@
 }
 
 .content-center {
+  --fs-400: 0.9rem;
+
   width: 30ch;
   margin-inline: auto;
+  margin-top: 5.5rem;
+
+  font-size: var(--fs-400);
+  text-align: center;
+
+  p {
+    margin-top: 1rem;
+  }
 }
 
 .boxes {

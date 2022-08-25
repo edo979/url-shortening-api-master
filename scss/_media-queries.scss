@@ -63,6 +63,7 @@
     --fs-300: 0.825rem;
     --fs-400: 1rem;
     --fs-500: 1.2rem;
+    --fs-700: 2.25rem;
     --fs-800: 4.3rem;
   }
 
@@ -159,6 +160,13 @@
         margin-left: auto;
       }
     }
+  }
+
+  .content-center {
+    --fs-400: 1rem;
+
+    width: 45ch;
+    margin-top: 7rem;
   }
 
   .boxes {

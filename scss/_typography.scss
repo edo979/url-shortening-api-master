@@ -5,16 +5,31 @@
   --fs-300: 0.855rem;
   --fs-400: 1rem;
   --fs-500: 1rem;
+  --fs-700: 1.5rem;
   --fs-800: 2.25rem;
 }
 
 html {
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
+  color: hsl(var(--clr-neutral-400));
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.15;
   color: hsl(var(--clr-neutral-200));
 }
 
 h1 {
-  line-height: 1.15;
   font-size: var(--fs-800);
+}
+
+h2 {
+  font-size: var(--fs-700);
+}
+
+p {
+  line-height: 1.7;
 }
