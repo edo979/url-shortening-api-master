@@ -93,25 +93,49 @@
 
 .boxes {
   --f-direction: column;
+  --f-gap: 5rem;
+
   position: relative;
   isolation: isolate;
+
+  margin-top: 5.5rem;
 
   &::after {
     content: '';
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 5px;
-    background-color: limegreen;
+    width: 8px;
+    background-color: hsl(var(--clr-primary-400));
     z-index: -1;
   }
 }
 
 .box {
-  padding: 1rem;
-  background-color: white;
+  position: relative;
+  padding: 2.05rem 1.75rem;
+  border-radius: 5px;
 
   font-size: var(--fs-200);
+  text-align: center;
+
+  background-color: hsl(var(--clr-neutral-900));
+
+  h3 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &_img {
+    display: block;
+    width: max-content;
+    padding: 20px;
+    margin-top: -4.5rem;
+    margin-inline: auto;
+    border-radius: 50%;
+
+    background-color: hsl(var(--clr-primary-200));
+  }
 }
 
 .cta {
