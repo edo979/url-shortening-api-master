@@ -67,6 +67,10 @@
   }
 
   // LAYOUT
+  .grid-container {
+    justify-items: start;
+  }
+
   .navbar {
     &_toggler {
       display: none;
@@ -74,15 +78,15 @@
   }
 
   .navbar-wrapper {
-    margin-top: 1rem;
+    padding-top: 3rem;
     grid-template-rows: auto 630px;
+    row-gap: 0;
   }
 
   .header {
     grid-area: 2 / 2 / 3 / 3;
     justify-self: start;
     align-self: center;
-    margin: 0;
     width: 50ch;
   }
 
@@ -95,8 +99,6 @@
 
   // COMPONENTS
   .hero-image {
-    margin-top: 0rem;
-
     img {
       height: 32vw;
     }

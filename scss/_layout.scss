@@ -24,11 +24,18 @@
       25px,
       1fr
     );
+  justify-items: center;
+}
+
+.navbar-wrapper {
+  row-gap: 1.25rem;
+  grid-template-rows: auto 360px auto;
 }
 
 .navbar {
   grid-area: 1 / 2 / 2 / 3;
   align-self: start;
+  justify-self: stretch;
 }
 
 .hero-image {
@@ -37,9 +44,7 @@
 
 .header {
   grid-area: 3 / 2 / 4 / 3;
-  justify-self: center;
   width: 28ch;
-  margin-bottom: 5rem;
 }
 
 main {

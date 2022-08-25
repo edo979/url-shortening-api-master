@@ -2,16 +2,14 @@
 @import 'buttons';
 
 .hero-image {
-  margin-top: 1.25rem;
-
   img {
+    height: 340px;
     object-fit: cover;
     object-position: left center;
   }
 }
 
 .header {
-  margin-top: 2rem;
   text-align: center;
 
   p {
