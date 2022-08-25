@@ -199,6 +199,12 @@
     }
   }
 
+  .cta {
+    padding-block: 3.75rem;
+
+    background-image: url('/images/bg-boost-desktop.svg');
+  }
+
   .footer {
     --f-direction: row;
     --f-align: start;
