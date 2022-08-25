@@ -1,5 +1,5 @@
 .btn {
-  padding: 0.8rem 2.5rem;
+  padding: var(--btn-padding, 0.8rem 2.5rem);
   border-radius: 4rem;
   border: 0;
 
@@ -13,5 +13,9 @@
   &-small {
     font-size: var(--fs-300);
     padding: 0.5rem 1.3rem;
+  }
+
+  &-square {
+    border-radius: var(--b-radius, 5px);
   }
 }

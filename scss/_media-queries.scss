@@ -71,6 +71,10 @@
     justify-items: start;
   }
 
+  *[class*='container'] {
+    padding-block: 4rem;
+  }
+
   .navbar {
     &_toggler {
       display: none;
@@ -78,9 +82,10 @@
   }
 
   .navbar-wrapper {
-    padding-top: 3rem;
     grid-template-rows: auto 630px;
     row-gap: 0;
+    margin-bottom: 0;
+    padding-top: 3rem;
   }
 
   .header {
@@ -119,8 +124,25 @@
 
   .form {
     --f-direction: row;
+    --f-gap: 1.25rem;
+    --b-radius: 10px;
+    --fs-500: 1.1rem;
+
+    margin-top: -150px;
+    padding: 3rem 3.5rem;
+
+    background-image: url('/images/bg-shorten-desktop.svg');
+    background-position: center right;
+
+    input {
+      align-self: stretch;
+      padding-inline: 1.55rem;
+    }
 
     button {
+      --btn-padding: 0.95rem 2.75rem;
+      font-size: var(--fs-500);
+
       max-width: max-content;
     }
   }

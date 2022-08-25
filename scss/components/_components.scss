@@ -25,16 +25,36 @@
 
 .form {
   --f-direction: column;
-  --f-gap: 0.5rem;
+  --f-gap: 0.75rem;
+  --b-radius: 5px;
+  --fs-500: 0.9rem;
+  --btn-padding: 0.5rem 1rem;
 
-  margin-top: -80px;
-  padding: 1rem;
+  margin-top: -165px;
+  padding: 1.25rem;
+  border-radius: 10px;
 
-  background-color: slateblue;
+  background-color: hsl(var(--clr-primary-200));
+  background-image: url('/images/bg-shorten-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom left;
 
   input,
   button {
     width: 100%;
+    border-radius: var(--b-radius);
+  }
+
+  input {
+    padding: var(--btn-padding);
+
+    font-size: var(--fs-500);
+    line-height: 1.8;
+
+    &::placeholder {
+      color: hsl(var(--clr-neutral-400));
+    }
   }
 }
 
