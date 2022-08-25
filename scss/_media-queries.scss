@@ -62,7 +62,7 @@
     --fs-200: 0.825rem;
     --fs-300: 0.825rem;
     --fs-400: 1rem;
-    --fs-500: 1.05rem;
+    --fs-500: 1.2rem;
     --fs-800: 4.3rem;
   }
 
@@ -73,20 +73,47 @@
     }
   }
 
+  .navbar-wrapper {
+    grid-template-rows: auto 650px;
+  }
+
   .header {
     grid-area: 2 / 2 / 3 / 3;
     justify-self: start;
-    width: 40ch;
+    align-self: center;
+    margin: 0;
+    width: 50ch;
   }
 
   .hero-image {
     grid-area: 2 / 2 / 3 / 4;
     justify-self: end;
-    width: 45%;
-    height: auto;
+    align-self: center;
+    width: 48%;
   }
 
   // COMPONENTS
+  .hero-image {
+    margin-top: 0rem;
+
+    img {
+      height: 32vw;
+    }
+  }
+
+  .header {
+    --v-flow: 0.2rem;
+    text-align: left;
+
+    p {
+      width: 40ch;
+    }
+
+    button {
+      margin-top: 2rem;
+    }
+  }
+
   .form {
     --f-direction: row;
 

@@ -5,7 +5,6 @@
   margin-top: 1.25rem;
 
   img {
-    height: 340px;
     object-fit: cover;
     object-position: left center;
   }
@@ -16,6 +15,7 @@
   text-align: center;
 
   p {
+    font-size: var(--fs-500);
     line-height: 1.65;
     color: hsl(var(--clr-neutral-400));
   }
