@@ -93,7 +93,7 @@
 
 .boxes {
   --f-direction: column;
-  --f-gap: 5rem;
+  --f-gap: 5.2rem;
 
   position: relative;
   isolation: isolate;
@@ -113,7 +113,8 @@
 
 .box {
   position: relative;
-  padding: 2.05rem 1.75rem;
+  padding: 1.75rem;
+  height: 265px;
   border-radius: 5px;
 
   font-size: var(--fs-200);
@@ -122,7 +123,7 @@
   background-color: hsl(var(--clr-neutral-900));
 
   h3 {
-    margin-top: 2.5rem;
+    margin-top: 2.75rem;
     margin-bottom: 1rem;
   }
 
