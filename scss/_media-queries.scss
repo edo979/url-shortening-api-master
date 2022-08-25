@@ -210,8 +210,14 @@
     --f-align: start;
     --f-gap: clamp(1rem, 10vw - 4rem, 4.5rem);
     --v-flow: 0;
+    margin-top: 0;
+    padding-bottom: 2rem;
 
     text-align: left;
+
+    &_brand {
+      margin-top: -0.5rem;
+    }
 
     &_nav {
       width: 16ch;
