@@ -209,21 +209,24 @@
     --f-direction: row;
     --f-align: start;
     --f-gap: clamp(1rem, 10vw - 4rem, 4.5rem);
+    --v-flow: 0;
 
     text-align: left;
-
-    &_brand {
-      .brand-icon {
-        width: 120px;
-        height: 30px;
-      }
-    }
 
     &_nav {
       width: 16ch;
 
       &:first-of-type {
         margin-left: auto;
+      }
+    }
+
+    .nav {
+      &_item {
+        &:first-of-type {
+          padding-block-start: 0;
+          padding-block-end: 0.55rem;
+        }
       }
     }
   }

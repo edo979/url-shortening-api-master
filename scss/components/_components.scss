@@ -159,19 +159,22 @@
 
 .footer {
   --f-direction: column;
+  --f-gap: 2rem;
+  --v-flow: 0.75rem;
   text-align: center;
 
+  margin-top: -1.5rem;
+
   &_brand {
-    svg {
-      width: 120px;
+    .brand-icon {
+      width: 125px;
       height: 50px;
+
       fill: hsl(var(--clr-neutral-900));
     }
   }
 
   > ul {
-    --v-flow: 0.7rem;
-
     list-style: none;
     margin: 0;
     padding: 0;
@@ -180,8 +183,7 @@
   .nav {
     &_item {
       &:first-of-type {
-        padding-block-start: 1rem;
-        padding-block-end: 0.55rem;
+        margin-bottom: 1rem;
       }
 
       color: hsl(var(--clr-neutral-900));
@@ -197,8 +199,6 @@
 .social-list {
   --f-direction: row;
   --f-gap: 1.25rem;
-
-  margin-top: 1.5rem;
 }
 
 .social-icon {
