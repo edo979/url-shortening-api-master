@@ -30,5 +30,23 @@
     &::placeholder {
       color: hsl(var(--clr-neutral-400));
     }
+
+    &.error {
+      box-shadow: 0px 0px 5px 3px hsl(var(--clr-secondary));
+      + p {
+        display: block;
+      }
+    }
+  }
+
+  &_error-msg {
+    display: none;
+
+    align-self: start;
+    margin-top: -0.5rem;
+
+    font-style: italic;
+    font-size: var(--fs-200);
+    color: hsl(var(--clr-secondary));
   }
 }

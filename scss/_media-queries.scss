@@ -193,6 +193,16 @@
 
       max-width: max-content;
     }
+
+    &_error-msg {
+      position: absolute;
+      left: 0;
+      bottom: -1.5rem;
+    }
+  }
+
+  .input-group {
+    position: relative;
   }
 
   .links-list {

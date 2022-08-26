@@ -21,6 +21,13 @@ const shortcodeApp = (function () {
 
   function setEventListener() {
     btnEl.addEventListener('click', (e) => {
+      if (inputEl.value === '') {
+        inputEl.classList.add('error')
+        return
+      } else {
+        inputEl.classList.remove('error')
+      }
+
       getShortenLink(inputEl.value)
       inputEl.value = ''
     })
