@@ -18,4 +18,8 @@
   &-square {
     border-radius: var(--b-radius, 5px);
   }
+
+  &-dark {
+    background-color: hsl(var(--clr-primary-200));
+  }
 }
