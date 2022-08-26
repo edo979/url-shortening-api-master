@@ -21,15 +21,18 @@ const shortcodeApp = (function () {
 
   function setEventListener() {
     btnEl.addEventListener('click', (e) => {
-      if (inputEl.value === '') {
-        inputEl.classList.add('error')
-        return
-      } else {
-        inputEl.classList.remove('error')
-      }
+      const re =
+        /(http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/
 
-      getShortenLink(inputEl.value)
-      inputEl.value = ''
+      if (re.test(inputEl.value)) {
+        inputEl.classList.remove('error')
+
+        getShortenLink(inputEl.value)
+
+        inputEl.value = ''
+      } else {
+        inputEl.classList.add('error')
+      }
     })
   }
 
