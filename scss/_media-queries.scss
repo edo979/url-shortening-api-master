@@ -58,15 +58,6 @@
 }
 
 @media (min-width: 50em) {
-  :root {
-    --fs-200: 0.825rem;
-    --fs-300: 0.825rem;
-    --fs-400: 1rem;
-    --fs-500: 1.2rem;
-    --fs-700: 2.25rem;
-    --fs-800: 4.3rem;
-  }
-
   // LAYOUT
   .grid-container {
     justify-items: start;
@@ -93,7 +84,7 @@
     grid-area: 2 / 2 / 3 / 3;
     justify-self: start;
     align-self: center;
-    width: 50ch;
+    width: min(50%, 50ch);
   }
 
   .hero-image {
@@ -101,6 +92,72 @@
     justify-self: end;
     align-self: center;
     width: 48%;
+  }
+
+  // COMPONENTS
+  .header {
+    text-align: left;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .box {
+    p {
+      width: 35ch;
+    }
+  }
+
+  .footer {
+    --f-direction: row;
+    --f-align: start;
+    --f-gap: 2rem;
+    --v-flow: 0;
+    --f-justify: space-between;
+    justify-self: stretch;
+    margin-top: 0;
+    padding-bottom: 2rem;
+
+    text-align: left;
+
+    &_brand {
+      margin-top: -0.5rem;
+      margin-right: auto;
+    }
+
+    &_nav {
+      width: 16ch;
+    }
+
+    .nav {
+      &_item {
+        &:first-of-type {
+          padding-block-start: 0;
+          padding-block-end: 0.55rem;
+        }
+      }
+    }
+  }
+
+  .social-list {
+    --f-direction: column;
+  }
+}
+
+@media (min-width: 65em) {
+  :root {
+    --fs-200: 0.825rem;
+    --fs-300: 0.825rem;
+    --fs-400: 1rem;
+    --fs-500: 1.2rem;
+    --fs-700: 2.25rem;
+    --fs-800: 4.3rem;
+  }
+
+  // LAYOUT
+  .header {
+    width: 50ch;
   }
 
   // COMPONENTS
@@ -112,7 +169,6 @@
 
   .header {
     --v-flow: 0.2rem;
-    text-align: left;
 
     p {
       width: 40ch;
@@ -197,6 +253,10 @@
     &_img {
       margin-inline-start: 0;
     }
+
+    p {
+      width: auto;
+    }
   }
 
   .cta {
@@ -206,34 +266,8 @@
   }
 
   .footer {
-    --f-direction: row;
-    --f-align: start;
-    --f-gap: clamp(1rem, 10vw - 4rem, 4.5rem);
-    --v-flow: 0;
-    margin-top: 0;
-    padding-bottom: 2rem;
-
-    text-align: left;
-
-    &_brand {
-      margin-top: -0.5rem;
-    }
-
-    &_nav {
-      width: 16ch;
-
-      &:first-of-type {
-        margin-left: auto;
-      }
-    }
-
-    .nav {
-      &_item {
-        &:first-of-type {
-          padding-block-start: 0;
-          padding-block-end: 0.55rem;
-        }
-      }
+    .social-list {
+      --f-direction: row;
     }
   }
 }
