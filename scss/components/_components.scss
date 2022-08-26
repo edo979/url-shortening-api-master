@@ -47,6 +47,7 @@
     p,
     a {
       padding-inline: $padding-inline;
+      font-size: 0.9rem;
     }
 
     button {
@@ -61,8 +62,12 @@
       padding-bottom: 0.55rem;
       border-bottom: 1px solid hsl(var(--clr-neutral-700), 0.3);
 
-      font-size: 0.9rem;
       color: hsl(var(--clr-neutral-100));
+    }
+
+    a {
+      color: hsl(var(--clr-primary-400));
+      text-shadow: 0px 0px 1px hsl(var(--clr-primary-400), 0.5);
     }
   }
 }

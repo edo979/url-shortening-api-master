@@ -64,7 +64,7 @@ const shortcodeApp = (function () {
       <a href="${link.full_short_link}">${link.full_short_link}</a>`
 
       const buttonEl = document.createElement('button')
-      buttonEl.setAttribute('class', 'btn btn-square')
+      buttonEl.setAttribute('class', 'btn btn-primary btn-small btn-square')
       buttonEl.textContent = BTN_COPY_TEXT
       buttonEl.onclick = (e) => {
         copyLink(e.target)
