@@ -34,12 +34,18 @@
     --f-align: stretch;
     --f-gap: 1rem;
 
-    padding: 1rem;
+    padding: 1.25rem;
 
     background-color: white;
 
     &:not(:first-child) {
       margin-top: 1rem;
+    }
+
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
   }
 }
