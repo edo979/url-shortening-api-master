@@ -22,15 +22,21 @@
     padding: 0;
 
     width: 13ch;
+
+    .nav_link {
+      &:is(:hover, :focus) {
+        color: hsl(var(--clr-primary-400));
+      }
+    }
   }
 
   .nav {
     &_item {
+      color: hsl(var(--clr-neutral-900));
+
       &:first-of-type {
         margin-bottom: 1rem;
       }
-
-      color: hsl(var(--clr-neutral-900));
     }
 
     &_link {
@@ -48,6 +54,12 @@
 .social-icon {
   width: 24px;
   height: 24px;
+
+  fill: hsl(var(--clr-neutral-900));
+
+  &:is(:hover, :focus) {
+    fill: hsl(var(--clr-primary-400));
+  }
 }
 
 .attribution {

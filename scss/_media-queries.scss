@@ -20,6 +20,12 @@
       // move nav to left
       transform: translateX(120%);
       transition: transform 0.5s ease-in-out;
+
+      .nav_link {
+        &:is(:hover, :focus) {
+          color: inherit;
+        }
+      }
     }
 
     // Show navbar on click in mobile view

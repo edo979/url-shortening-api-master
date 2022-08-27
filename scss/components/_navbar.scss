@@ -54,6 +54,12 @@
     list-style: none;
     padding: 0;
     margin: 0;
+
+    .nav_link {
+      &:is(:hover, :focus) {
+        color: hsl(var(--clr-neutral-200));
+      }
+    }
   }
 }
 
