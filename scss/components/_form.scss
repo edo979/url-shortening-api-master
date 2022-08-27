@@ -36,6 +36,10 @@
       + p {
         display: block;
       }
+
+      &::placeholder {
+        color: hsl(var(--clr-secondary));
+      }
     }
   }
 
