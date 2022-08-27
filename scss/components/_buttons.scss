@@ -5,6 +5,10 @@
 
   cursor: pointer;
 
+  &:is(:hover) {
+    filter: saturate(0.5) brightness(1.15);
+  }
+
   &-primary {
     color: hsl(var(--clr-neutral-900));
     background-color: hsl(var(--clr-primary-400));
